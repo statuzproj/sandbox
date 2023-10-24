@@ -29,7 +29,7 @@ resource "helm_release" "prometheus" {
               scheme: http
               static_configs:
                 - targets:
-                    - watcher:8080
+                    - watcher:8081
     EOT
   ]
 }

@@ -35,12 +35,15 @@ To get started with development, follow these steps:
    terraform init
    terraform apply
    ```
-3. Access Grafana and Prometheus
+3. Access Prometheus with minikube proxy
    ```shell
-   minikube servcie grafana -n statuz
-   minikube servcie grafana -n statuz
+   minikube service grafana -n statuz
    ```
-4. Set up DevSpace for seamless development and deployment: 
+4. Access Prometheus with minikube proxy
+   ```shell
+   minikube service grafana -n statuz
+   ```
+5. Set up DevSpace for seamless development and deployment: 
    ```shell
    devspace use context minikube
    devspace use namespace statuz

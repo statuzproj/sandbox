@@ -35,7 +35,7 @@ To get started with development, follow these steps:
    terraform init
    terraform apply
    ```
-3. Access Prometheus with minikube proxy
+3. Access Grafana with minikube proxy
    ```shell
    minikube service grafana -n statuz
    ```

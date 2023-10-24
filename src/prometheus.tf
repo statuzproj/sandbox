@@ -22,6 +22,15 @@ resource "helm_release" "prometheus" {
               static_configs:
                 - targets:
                     - localhost:9090
+            - job_name: genie
+              honor_timestamps: true
+              scrape_interval: 15s
+              scrape_timeout: 10s
+              metrics_path: /metrics
+              scheme: http
+              static_configs:
+                - targets:
+                    - genie:8080
             - job_name: watcher
               honor_timestamps: true
               scrape_interval: 15s

@@ -41,7 +41,7 @@ To get started with development, follow these steps:
    ```
 4. Access Prometheus with minikube proxy
    ```shell
-   minikube service grafana -n statuz
+   minikube service prometheus -n statuz
    ```
 5. Set up DevSpace for seamless development and deployment: 
    ```shell

@@ -1,18 +1,19 @@
 # Developer Sandbox - statuz 
 
-
+Thank you for your interest in contributing to statuz! This developer sandbox provides you with all 
+the tools and instructions needed to get started with statuz development.
 
 ## Prerequisites for statuz
 
 Before getting started with Statuz, please make sure you have the following tools installed:
 
-1. **Docker**: [Download Docker](https://www.docker.com/get-started/)
+1. **Docker**: [Install Docker](https://www.docker.com/get-started/)
    - Docker is essential for containerizing and managing statuz components efficiently.
 
 2. **Minikube**: [Install Minikube](https://minikube.sigs.k8s.io/docs/start/)
    - Minikube allows you to deploy statuz and its dependencies on a local Kubernetes cluster.
 
-3. **Terraform**: [Get Terraform](https://developer.hashicorp.com/terraform/downloads)
+3. **Terraform**: [Install Terraform](https://developer.hashicorp.com/terraform/downloads)
    - Terraform is used for provisioning Prometheus and Grafana within your Minikube environment.
 
 4. **DevSpace**: [Install DevSpace](https://www.devspace.sh/docs/getting-started/installation)
@@ -20,7 +21,7 @@ Before getting started with Statuz, please make sure you have the following tool
 
 By ensuring you have these tools in place, you'll be well-prepared to work with statuz on Kubernetes. Let's get started!
 
-## Getting Started
+## Prepare development environment
 
 To get started with development, follow these steps:
 
@@ -43,4 +44,15 @@ To get started with development, follow these steps:
    ```shell
    devspace use context minikube
    devspace use namespace statuz
+   ```
+
+Now that you are set for development, lets take the example of watcher.
+1. To work on the watcher microservice of statuz, first, clone its repository:
+   ```shell
+   git clone https://github.com/statuzproj/watcher
+   ```
+2. Start devspace for a streamlined development experience:
+   ```shell
+   cd watcher
+   devspace dev
    ```

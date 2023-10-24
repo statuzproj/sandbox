@@ -13,10 +13,13 @@ Before getting started with Statuz, please make sure you have the following tool
 2. **Minikube**: [Install Minikube](https://minikube.sigs.k8s.io/docs/start/)
    - Minikube allows you to deploy statuz and its dependencies on a local Kubernetes cluster.
 
-3. **Terraform**: [Install Terraform](https://developer.hashicorp.com/terraform/downloads)
+3. **Kubectl**: [Install Kubectl](https://kubernetes.io/docs/tasks/tools/)
+   - Kubectl is used for inspecting, and managing configurations of statuz. 
+
+4. **Terraform**: [Install Terraform](https://developer.hashicorp.com/terraform/downloads)
    - Terraform is used for provisioning Prometheus and Grafana within your Minikube environment.
 
-4. **DevSpace**: [Install DevSpace](https://www.devspace.sh/docs/getting-started/installation)
+5. **DevSpace**: [Install DevSpace](https://www.devspace.sh/docs/getting-started/installation)
    - DevSpace simplifies the development and deployment of statuz on your local Kubernetes cluster.
 
 By ensuring you have these tools in place, you'll be well-prepared to work with statuz on Kubernetes. Let's get started!

@@ -6,18 +6,18 @@ resource "kubernetes_config_map" "watchpoints" {
   }
   data = {
     global = <<EOF
-prometheus:
-  endpoint: prometheus-server
+default:
+  interval: 300s
   EOF
     endpoints = <<EOF
-- name: google-bd
+- name: google_bd
   type: webpage
   target: https://www.google.com.bd/
-- name: grafana-web
+- name: grafana_web
   type: api
   method: GET
   target: https://grafana.com/healthz
-- name: cloudflare-dns
+- name: cloudflare_dns
   type: ping
   target: 1.1.1.1
   EOF

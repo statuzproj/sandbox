@@ -1,14 +1,15 @@
-resource "kubernetes_config_map" "watchpoints" {
-
+resource "kubernetes_config_map_v1" "watchpoints" {
   metadata {
-    name = "watchpoints"
+    name      = "watchpoints"
     namespace = kubernetes_namespace_v1.statuz.id
   }
+
   data = {
     global = <<EOF
 default:
   interval: 300s
   EOF
+
     endpoints = <<EOF
 - name: google_bd
   type: webpage

@@ -1,9 +1,10 @@
 resource "helm_release" "grafana" {
-  namespace        = kubernetes_namespace_v1.statuz.id
-  repository       = "https://grafana.github.io/helm-charts"
-  chart            = "grafana"
-  name             = "grafana"
-  version          = "6.61.1"
+  namespace  = kubernetes_namespace_v1.statuz.id
+  repository = "https://grafana.github.io/helm-charts"
+  chart      = "grafana"
+  name       = "grafana"
+  version    = "6.61.1"
+  wait       = true
   values = [
     <<-EOT
       grafana.ini:

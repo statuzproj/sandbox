@@ -1,9 +1,10 @@
 resource "helm_release" "prometheus" {
-  namespace = kubernetes_namespace_v1.statuz.id
+  namespace  = kubernetes_namespace_v1.statuz.id
   repository = "https://prometheus-community.github.io/helm-charts"
-  chart = "prometheus"
-  name  = "prometheus"
-  version                    = "25.2.0"
+  chart      = "prometheus"
+  name       = "prometheus"
+  version    = "25.2.0"
+  wait       = true
   values = [
     <<-EOT
       serverFiles:

@@ -5,12 +5,7 @@ resource "kubernetes_config_map_v1" "watchpoints" {
   }
 
   data = {
-    global = <<EOF
-default:
-  interval: 300s
-  EOF
-
-    endpoints = <<EOF
+    "endpoints.yaml" = <<EOF
 - name: google_bd
   type: webpage
   target: https://www.google.com.bd/

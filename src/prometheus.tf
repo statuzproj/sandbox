@@ -7,6 +7,15 @@ resource "helm_release" "prometheus" {
   wait       = true
   values = [
     <<-EOT
+      prometheus-pushgateway:
+        enabled: false
+      prometheus-node-exporter:
+        enabled: false
+      kube-state-metrics:
+        enabled: false
+      alertmanager:
+        enabled: false
+
       serverFiles:
         rule_files:
           - /etc/config/recording_rules.yml
